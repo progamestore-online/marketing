@@ -1,15 +1,42 @@
 # progamestore-online/marketing
 
-Static "coming soon" placeholder for **progamestore.online**. Mirrors the [PWS marketing](https://prowebstore.online) pattern (`pws-marketing` CF Pages project) so the URL serves a real page instead of CF error 1014.
+Static "coming soon" placeholder for **progamestore.online**.
 
-## Deploy (one-time, requires CF dashboard)
+## Status
 
-The wrangler OAuth that AI agents use can deploy a new Pages project, but **binding `progamestore.online` as a custom domain still needs the CF dashboard** (zone admin permission). One-time setup:
+- ✅ Pages project `pgs-marketing` deployed (`https://pgs-marketing.pages.dev` — live)
+- ✅ Custom domain `progamestore.online` added to project (status: pending DNS verification)
+- ⏳ **Needs one DNS record** — see below
 
-1. **Create the Pages project** (either via `npx wrangler pages deploy . --project-name=pgs-marketing` from this repo, or via the CF dashboard "Create application" → "Pages" → "Connect to Git" pointing at this repo on the `main` branch with build settings: Build command: *(none)*, Output: `.`).
-2. **Add the custom domain** in the dashboard: Pages → `pgs-marketing` → Custom domains → "Set up a custom domain" → `progamestore.online`. CF will verify the existing A/AAAA records.
-3. **Wait \~1 minute** for SSL to provision. Verify with `curl -I https://progamestore.online` (should return `HTTP/2 200`).
+## Last step (you, via CF dashboard or `wrangler dns`-equivalent)
 
-## Why this exists
+The CF Pages custom-domain bind is initialized but stuck in `pending`
+because `progamestore.online` (apex) has no DNS record pointing at
+the Pages project. Add one:
 
-Before this placeholder, `https://progamestore.online` returned **CF error 1014 ("CNAME Cross-User Banned")** — the DNS pointed at Cloudflare but no zone on this account claimed the hostname. Anyone clicking the "ProGameStore (coming)" CTA on `freegamestore.online/pricing` saw an opaque CF error page. The CTA in pricing was wrapped in a `<span>` instead of `<a>` as a stop-gap; this placeholder is the lasting fix.
+| Type  | Name | Content                       | Proxy |
+|-------|------|-------------------------------|-------|
+| CNAME | `@`  | `pgs-marketing.pages.dev`     | ✅ on  |
+
+via:
+
+- **Dashboard**: https://dash.cloudflare.com → progamestore.online → DNS → Add record (CNAME `@` → `pgs-marketing.pages.dev`, proxy on)
+- **API** (needs an API token with Zone:Edit scope on this zone):
+  ```
+  curl -X POST -H "Authorization: Bearer $CF_TOKEN_ZONE_EDIT" \
+    -H "Content-Type: application/json" \
+    https://api.cloudflare.com/client/v4/zones/04158221bba995befe00df02c6817b86/dns_records \
+    -d '{"type":"CNAME","name":"@","content":"pgs-marketing.pages.dev","proxied":true}'
+  ```
+
+CF will then auto-verify the bind (~30 s) and progamestore.online will serve the placeholder.
+
+The wrangler OAuth token used by AI agents has Pages scope only, so this last step needs you.
+
+## Updates
+
+To update the placeholder content, push to main; CF Pages will redeploy automatically.
+
+## Background
+
+Before this, https://progamestore.online returned **CF error 1014 ("CNAME Cross-User Banned")**: DNS on Cloudflare but no zone served the hostname. The "ProGameStore (coming)" CTA on freegamestore.online/pricing was wrapped in a `<span>` instead of `<a>` as a stop-gap; this placeholder + Pages project + the DNS record above is the lasting fix.
