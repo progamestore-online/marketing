@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProGameStore — Premium Web Games (coming)</title>
+  <meta name="description" content="Premium primitives for ambitious web games. Cloud sync, AI opponents, multiplayer, no ads. The paid counterpart to FreeGameStore." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://progamestore.online/" />
+
+  <meta property="og:title" content="ProGameStore — Premium Web Games (coming)" />
+  <meta property="og:description" content="Premium primitives for ambitious web games. The paid counterpart to FreeGameStore." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://progamestore.online/" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --pro: #7c3aed;
+      --pro-soft: #f5f3ff;
+      --free: #10b981;
+      --free-soft: #ecfdf5;
+      --border: #e5e5e5;
+      --radius: 1.25rem;
+      --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06);
+      --shadow-lg: 0 4px 20px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f0f0f;
+        --surface: #1a1a1a;
+        --ink: #f0f0f0;
+        --muted: #999;
+        --border: #2a2a2a;
+        --pro-soft: rgba(124, 58, 237, 0.12);
+        --free-soft: rgba(16, 185, 129, 0.12);
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    main {
+      max-width: 38rem;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 2.5rem;
+      text-align: center;
+    }
+
+    .pro-badge {
+      display: inline-block;
+      background: var(--pro-soft);
+      color: var(--pro);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .lede {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+
+    .status {
+      background: var(--bg);
+      border: 1px dashed var(--border);
+      border-radius: 0.9rem;
+      padding: 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .status strong { color: var(--ink); }
+
+    .ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    a.btn {
+      display: inline-block;
+      padding: 0.85rem 1.5rem;
+      border-radius: 0.7rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.1s ease;
+    }
+    a.btn:active { transform: translateY(1px); }
+
+    a.primary {
+      background: var(--free);
+      color: white;
+    }
+    a.secondary {
+      background: var(--free-soft);
+      color: var(--free);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <div class="pro-badge">ProGameStore</div>
+      <h1>Premium primitives for ambitious web games.</h1>
+      <p class="lede">Same model as <a href="https://freegamestore.online" style="color:var(--free);font-weight:600">FreeGameStore</a> — free, MIT-licensed, no tracking — but with the heavier infrastructure that high-engagement games need.</p>
+
+      <div class="status">
+        <strong>In development.</strong>
+        We&rsquo;re not yet taking creators or applications. If you have an
+        ambitious game idea that needs cloud sync, multiplayer, or AI
+        opponents, build the free version first on FreeGameStore — when
+        Pro launches you&rsquo;ll be the natural first wave.
+      </div>
+
+      <div class="ctas">
+        <a class="primary" href="https://freegamestore.online">Build on FreeGameStore &rarr;</a>
+        <a class="secondary" href="https://github.com/freegamestore-online">GitHub org</a>
+      </div>
+    </div>
+
+    <footer>
+      ProGameStore &middot; sister site of
+      <a href="https://freegamestore.online" style="color:inherit">FreeGameStore</a>,
+      <a href="https://freeappstore.online" style="color:inherit">FreeAppStore</a>,
+      <a href="https://proappstore.online" style="color:inherit">ProAppStore</a>.
+    </footer>
+  </main>
+</body>
+</html>
