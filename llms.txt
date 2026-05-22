@@ -1,0 +1,36 @@
+# ProGameStore
+
+> ProGameStore is the paid counterpart to FreeGameStore. A marketplace for premium browser games with multiplayer lobbies, cloud sync, server-side AI opponents, daily challenges, and Stripe-powered subscriptions. Games are PWAs built with TypeScript and any rendering approach (Canvas, WebGL, DOM, Phaser, Kaplay, Pixi, Babylon.js). The platform is pre-launch; no games are published yet.
+
+## Status
+
+Pre-launch. The org exists with infrastructure in progress. Build your game on FreeGameStore first; when Pro launches, you'll be the natural first wave.
+
+## AI Agent Integration
+
+- [skills.md](https://progamestore.online/skills.md): Platform guide for AI agents. What Pro adds over Free, planned SDK, architecture, deploy flow.
+- [MCP Server](https://mcp.freeappstore.online/mcp): Remote MCP server (Streamable HTTP) covering the whole platform family. Connect with `npx mcp-remote https://mcp.freeappstore.online/mcp`.
+- [FreeGameStore Skills](https://freegamestore.online/SKILLS.md): The free tier guide. Pro games will use the same SDK and patterns.
+
+## What Pro Adds Over Free
+
+- Real-time rooms: uncapped (vs 5 rooms x 25 connections on free)
+- Server-side AI for NPCs, procgen, opponents
+- Cloud sync with 10MB/user (vs localStorage only)
+- Scheduled workers (daily challenges, digests)
+- Custom domains
+- Stripe Connect subscriptions with developer-set pricing
+- Large multiplayer lobbies and persistent worlds
+
+## Sister Sites
+
+- [FreeGameStore](https://freegamestore.online): Free games, MIT-licensed, no tracking.
+- [FreeAppStore](https://freeappstore.online): Free PWA apps.
+- [ProAppStore](https://proappstore.online): Paid PWA apps.
+- [FreeWebStore](https://freewebstore.online): Free AI-built single-page sites.
+- [ProWebStore](https://prowebstore.online): AI-operated CMS for business sites.
+
+## Platform
+
+- [GitHub Org](https://github.com/progamestore-online): Source code and issue tracker.
+- [Store](https://progamestore.online/): Landing page (coming soon).
