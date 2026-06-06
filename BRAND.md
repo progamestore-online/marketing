@@ -53,7 +53,7 @@ Favicon: Violet gradient "G" on rounded rect (512x512, rx=96, Manrope 800).
 ## Design Principles
 
 1. **Same quality bar** — Pro games must be as polished as free ones
-2. **Same SDK** — `@freegamestore/games` for UI consistency (considering `@progamestore/games` in future)
+2. **Same SDK** — `@progamestore/games` for UI consistency
 3. **Same viewport rules** — zero scroll, mobile-first, 12-viewport auditor
 4. **Premium differentiation in features, not visuals** — a Pro game looks identical to a Free game, it just does more
 
