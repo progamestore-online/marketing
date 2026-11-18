@@ -1,0 +1,13 @@
+{
+  "version": "2026-11-18",
+  "id": "pgs",
+  "name": "ProGameStore",
+  "prefix": "Pro",
+  "noun": "Game",
+  "family": "games",
+  "accent": "#9333ea",
+  "darkAccent": "#c084fc",
+  "gradient": "#c084fc",
+  "ink": "#ffffff",
+  "domain": "progamestore.online"
+}

@@ -7,16 +7,23 @@
   <title>Page not found — ProGameStore</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <style>
+@font-face{font-family:Manrope;src:url('/fonts/manrope-variable.woff2') format('woff2');font-weight:200 800;font-display:swap}@font-face{font-family:Fraunces;src:url('/fonts/fraunces-variable.woff2') format('woff2');font-weight:100 900;font-display:swap}.family-brand{display:inline-flex;align-items:center;justify-content:center;gap:10px;color:var(--ink);font-family:Manrope,sans-serif;font-size:1.4rem;font-weight:800;letter-spacing:-.035em;text-decoration:none;white-space:nowrap}.family-brand span span{color:var(--pro,#9333ea)}.family-brand img{flex-shrink:0}
+h1,h2{font-family:Fraunces,serif}@media(prefers-color-scheme:dark){:root{--pro:#c084fc}}
+
     :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
     body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #fafaf9; color: #1a1a1a; }
     main { max-width: 36rem; padding: 2rem; }
     p { line-height: 1.6; color: #6b6b6b; }
-    a { color: #7c3aed; }
+    a { color: #9333ea; }
     @media (prefers-color-scheme: dark) { body { background: #0f0f0f; color: #f0f0f0; } p { color: #aaa; } a { color: #c4b5fd; } }
   </style>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#9333ea">
 </head>
 <body>
   <main>
+<a class="family-brand" href="/" aria-label="ProGameStore home" style="margin-bottom:1.5rem"><img src="/favicon.svg" width="36" height="36" alt=""><span>Pro<span>Game</span>Store</span></a>
     <p>ProGameStore</p>
     <h1>Page not found</h1>
     <p>We couldn’t find that page. Visit the homepage for the latest on ProGameStore.</p>

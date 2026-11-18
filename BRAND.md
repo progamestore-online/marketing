@@ -1,65 +1,11 @@
-# ProGameStore Brand Guidelines
+# ProGameStore brand
 
-## Identity
+Canonical family kit: [stores-workspace/brand](https://github.com/serge-ivo/stores-workspace/tree/main/brand). Vendored files in `brand/assets/` are exact copies of `assets/pgs/`; update from that source. Root favicon, touch/PWA icons and social image are served copies.
 
-**Name**: ProGameStore (one word, PascalCase)
-**Tagline**: Premium web games with superpowers.
-**URL**: progamestore.online
-**Free pair**: FreeGameStore (freegamestore.online)
+Use the shared games controller symbol and **ProGameStore**, with Game accented violet: light `#9333ea`, dark `#c084fc`. The wordmark uses Manrope 800; interface text uses Manrope and editorial headings use Fraunces. Fonts are self-hosted in `fonts/` with their licenses. Preserve existing automatic light/dark behavior and storefront's explicit theme choice.
 
-## Logo
+Use `mark.svg` for a standalone symbol, outlined `wordmark-light.svg` / `wordmark-dark.svg` on matching surfaces, and `og-image.png` for platform shares. SVG favicon and 192/512 maskable PWA icons share this identity. Do not replace individual games' icons, art or brands with the platform symbol.
 
-Text wordmark: "Pro[Game]Store" — "Game" in accent violet.
+## Production ownership
 
-```
-Pro[Game]Store    — accent violet (#9333ea)
-```
-
-- Always one word, PascalCase
-- Never "Pro Game Store" (three words)
-
-Favicon: Violet gradient "G" on rounded rect (512x512, rx=96, Manrope 800).
-
-## Colors
-
-| Token | Light | Dark | Usage |
-|-------|-------|------|-------|
-| `--accent` | `#9333ea` | `#c084fc` | Primary actions, links |
-| `--accent-soft` | `#faf5ff` | `#1e1033` | Accent backgrounds |
-| `--ink` | `#1a1a1a` | `#f0f0f0` | Body text |
-| `--muted` | `#6b6b6b` | `#888888` | Secondary text |
-| `--surface` | `#ffffff` | `#1a1a1a` | Card backgrounds |
-| `--bg` | `#fafaf9` | `#0f0f0f` | Page background |
-| `--border` | `#e5e5e5` | `#2a2a2a` | Borders |
-
-## Typography
-
-- **Body**: Manrope (400-700) — same as FreeGameStore
-- **Display**: Fraunces (700-800) — same as FreeGameStore
-- **Logo**: Manrope weight 800
-
-## Dark Mode
-
-`prefers-color-scheme: dark` — automatic, no toggle.
-
-## Differentiation from Free
-
-- Violet accent (vs emerald for FreeGameStore)
-- "Pro" prefix signals premium features
-- Same game shell, same brand fonts, same mobile-first approach
-- Pro games can have: cloud sync, multiplayer lobbies, AI opponents, subscriptions
-- Pro game code is private (not MIT like free tier)
-
-## Design Principles
-
-1. **Same quality bar** — Pro games must be as polished as free ones
-2. **Same SDK** — `@progamestore/games` for UI consistency
-3. **Same viewport rules** — zero scroll, mobile-first, 12-viewport auditor
-4. **Premium differentiation in features, not visuals** — a Pro game looks identical to a Free game, it just does more
-
-## Rules
-
-- ZERO analytics or tracking in gameplay
-- Subscription pricing is developer-set with 10% platform commission
-- Same compliance checks as free tier (build, license, brand, viewport)
-- All Pro games must still work on 320x568 viewport
+`progamestore-online/marketing` is the active coming-soon site at progamestore.online. Its public-asset allowlist includes the served brand files and fonts; repository docs and kit sources are not deployed. The catalogue in `progamestore-online/storefront` remains dormant. Pushes there validate/build only. An explicit manual workflow dispatch with `launch_catalogue=true` is required to replace the marketing site, and is outside branding maintenance.

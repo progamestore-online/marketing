@@ -12,17 +12,20 @@
   <meta property="og:description" content="ProGameStore privacy policy. We collect no data, use no cookies, and perform no tracking." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://progamestore.online/privacy" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <style>
+@font-face{font-family:Manrope;src:url('/fonts/manrope-variable.woff2') format('woff2');font-weight:200 800;font-display:swap}@font-face{font-family:Fraunces;src:url('/fonts/fraunces-variable.woff2') format('woff2');font-weight:100 900;font-display:swap}.family-brand{display:inline-flex;align-items:center;justify-content:center;gap:10px;color:var(--ink);font-family:Manrope,sans-serif;font-size:1.4rem;font-weight:800;letter-spacing:-.035em;text-decoration:none;white-space:nowrap}.family-brand span span{color:var(--pro,#9333ea)}.family-brand img{flex-shrink:0}
+h1,h2{font-family:Fraunces,serif}@media(prefers-color-scheme:dark){:root{--pro:#c084fc}}
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --bg: #fafaf9; --surface: #ffffff; --ink: #1a1a1a; --muted: #6b6b6b;
-      --pro: #7c3aed; --border: #e5e5e5; --radius: 1.25rem;
+      --pro: #9333ea; --border: #e5e5e5; --radius: 1.25rem;
     }
     @media (prefers-color-scheme: dark) {
       :root { --bg: #0f0f0f; --surface: #1a1a1a; --ink: #f0f0f0; --muted: #999; --border: #2a2a2a; }
     }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; padding: 2rem 1.5rem; }
+    body { font-family: Manrope, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; padding: 2rem 1.5rem; }
     main { max-width: 42rem; margin: 0 auto; }
     a { color: var(--pro); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -36,9 +39,15 @@
     li { margin-bottom: 0.3rem; }
     footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--muted); }
   </style>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#9333ea">
+<meta property="og:image" content="https://progamestore.online/og-image.png">
+<meta name="twitter:image" content="https://progamestore.online/og-image.png">
 </head>
 <body>
   <main>
+<a class="family-brand" href="/" aria-label="ProGameStore home" style="margin-bottom:1.5rem"><img src="/favicon.svg" width="36" height="36" alt=""><span>Pro<span>Game</span>Store</span></a>
     <a href="/" class="back">&larr; ProGameStore</a>
     <h1>Privacy Policy</h1>
     <p class="subtitle">We believe privacy is a right, not a feature.</p>

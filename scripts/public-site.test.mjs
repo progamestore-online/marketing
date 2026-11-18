@@ -10,7 +10,7 @@ test('deployment artifact includes real policies and 404, excluding repo notes a
   t.after(() => fs.rmSync(output, { recursive: true, force: true }));
   preparePublic(output);
   assert.deepEqual(fs.readdirSync(output).sort(), [
-    '404.html', 'favicon.svg', 'index.html', 'llms.txt', 'privacy.html', 'robots.txt', 'skills.md', 'terms.html',
+    '404.html', 'apple-touch-icon.png', 'favicon.svg', 'fonts', 'icon-192.png', 'icon-512.png', 'index.html', 'llms.txt', 'manifest.json', 'og-image.png', 'privacy.html', 'robots.txt', 'skills.md', 'terms.html',
   ]);
   const home = fs.readFileSync(path.join(output, 'index.html'), 'utf8');
   const missing = fs.readFileSync(path.join(output, '404.html'), 'utf8');
