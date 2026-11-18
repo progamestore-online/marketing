@@ -9,3 +9,9 @@ Use `mark.svg` for a standalone symbol, outlined `wordmark-light.svg` / `wordmar
 ## Production ownership
 
 `progamestore-online/marketing` is the active coming-soon site at progamestore.online. Its public-asset allowlist includes the served brand files and fonts; repository docs and kit sources are not deployed. The catalogue in `progamestore-online/storefront` remains dormant. Pushes there validate/build only. An explicit manual workflow dispatch with `launch_catalogue=true` is required to replace the marketing site, and is outside branding maintenance.
+
+## Browser cache updates
+
+Platform asset URLs and manifest icon URLs include `?v=2026-11-18`, matching
+the kit revision. Bump this value when replacing kit assets so returning browsers
+fetch the new identity even when an older stable URL remains cached.
