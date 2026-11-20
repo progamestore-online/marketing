@@ -10,3 +10,5 @@ node scripts/prepare-public.mjs
 ```
 
 The top-level `404.html` intentionally disables Cloudflare Pages' SPA fallback. Unknown paths, including the unadvertised `/sitemap.xml`, must return a real 404 instead of the homepage with status 200. The coming-soon site does not advertise a game sitemap. Keep root, privacy, terms, favicon, robots, llms and skills resources available.
+
+Brand files and the cache parameter are described in [BRAND.md](BRAND.md).
